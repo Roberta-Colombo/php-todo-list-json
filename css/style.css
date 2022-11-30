@@ -1,0 +1,68 @@
+.wrapper {
+    background-color: rgb(211, 235, 226);
+    height: 100vh;
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(240, 122, 218);
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+li {
+    list-style-type: none;
+    border-bottom: 1px solid grey;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-task, .container {
+    width: 40%;
+    margin: 0 auto; 
+}
+
+.container {
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: white;
+    padding: 20px 30px;
+    color: rgb(101, 97, 97);
+}
+
+.add-task {
+    padding-top: 20px;
+}
+
+input {
+    width: 80%;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+#add-btn { 
+    width: 15%;
+    height: 40px;
+    border: 2px solid rgb(240, 122, 218);
+    color: rgb(240, 122, 218);
+    background-color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-left: 30px;
+}
+
+#erase-btn {
+    border-style: none;
+    background-color: transparent;
+    color: rgb(240, 122, 218);   
+}
+
+.to-do {
+    cursor: pointer;
+}
+
+
