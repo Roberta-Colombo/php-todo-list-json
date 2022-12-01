@@ -25,17 +25,40 @@ createApp({
           },
         })
         .then((res) => {
-          console.log(res.data);
-
           this.getTodo();
           this.newTodoText = "";
         });
     },
     eraseTask(index) {
-      this.todoList.splice(index, 1);
+      const todoListData = {
+        eraseTodoIndex: index,
+      };
+
+      axios
+        .post(this.apiUrl, todoListData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then((res) => {
+          console.log(res.data);
+          this.getTodo();
+        });
     },
     changeStatus(index) {
-      this.todoList[index].done = !this.todoList[index].done;
+      const todoListData = {
+        toggleTodoIndex: index,
+      };
+
+      axios
+        .post(this.apiUrl, todoListData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then((res) => {
+          this.getTodo();
+        });
     },
   },
   mounted() {
